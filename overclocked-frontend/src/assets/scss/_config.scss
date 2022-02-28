@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+@import 'variables';
+
+$main-clr: #f44336;
+$d-blue: #17202a;
+$l-blue: #2980b9;
+$l-orange: #e59866;
+
+textarea:focus,
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='date']:focus,
+input[type='month']:focus,
+input[type='time']:focus,
+input[type='week']:focus,
+input[type='number']:focus,
+input[type='email']:focus,
+input[type='url']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='color']:focus,
+.uneditable-input:focus,
+.btn:focus,
+.btn-outline-light:focus {
+  border-color: none;
+  box-shadow: none;
+}
+
+/* --==Mixins==--
+====================== */
+@mixin transEase {
+  transition: all 0.3s ease;
+}
+
+// Media Queries Mixins
+@mixin mediaSs {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 468px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+/* --==Text==--
+====================== */
+a {
+  color: #fff;
+  @include transEase();
+
+  &:hover {
+    color: $main-clr;
+    text-decoration: none;
+  }
+}
+
+.highlight {
+  color: $main-clr !important;
+}

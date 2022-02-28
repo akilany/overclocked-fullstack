@@ -1,0 +1,321 @@
+/* --==Media Quries==--
+=========================== */
+
+// Large Screens & Desktops
+@include mediaXl {
+}
+
+// Laptops & Ipads
+@include mediaLg {
+  #services {
+    .container {
+      width: 90%;
+    }
+  }
+
+  // Sign Up Page
+  .page-content {
+    .form-content {
+      flex-flow: wrap;
+      width: 600px;
+
+      .form-left {
+        min-width: 100%;
+      }
+
+      .form-right {
+        min-width: 100%;
+      }
+    }
+  }
+}
+
+// Medium Screen & Tablets
+@include mediaMd {
+  #start {
+    padding: 2rem 1rem;
+    width: 500px;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  #services {
+    padding: 6rem 0;
+
+    .container {
+      width: 90%;
+    }
+  }
+
+  #components {
+    padding: 6rem 1rem;
+
+    .col-md-12 {
+      width: 100%;
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  #news {
+    padding: 6rem 1rem;
+
+    .col-12 {
+      width: 100%;
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .col-md-4 {
+      margin-top: 1rem;
+    }
+  }
+
+  #team {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  #brands {
+    padding: 6rem 0rem;
+    margin: auto;
+
+    .brand {
+      margin: auto;
+      max-width: 90px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  // Contact Page
+  #map {
+    iframe {
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+  #contact {
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    .col-md-8 {
+      text-align: center;
+      order: 1;
+
+      .btn {
+        justify-self: center;
+        align-self: center;
+      }
+    }
+  }
+
+  // Price Page
+  #price {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .row {
+      .card {
+        margin-bottom: 2rem;
+
+        .card-body {
+          h3 {
+            font-size: 1.5rem;
+          }
+
+          .lead {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Sign Up Page
+  .page-content {
+    .form-content {
+      flex-flow: wrap;
+      width: 450px;
+
+      .form-left {
+        min-width: 100%;
+      }
+
+      .form-right {
+        min-width: 100%;
+        padding: 2rem 3rem;
+      }
+    }
+  }
+}
+
+// Iphones & Mobile
+@include mediaSm {
+  .showcase {
+    .header {
+      margin: auto;
+
+      .header-tag {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  #start {
+    padding: 2rem 0rem;
+    width: 350px;
+  }
+
+  #services {
+    padding: 6rem 0rem;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    .icons {
+      i {
+        font-size: 3rem;
+      }
+    }
+
+    .container {
+      width: 100%;
+    }
+  }
+
+  #features {
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+
+  #components {
+    h1 {
+      font-size: 1.8rem !important;
+    }
+  }
+
+  #team {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  #brands {
+    padding: 4rem 0rem;
+
+    .brand {
+      max-width: 50px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  // Sign Up Page
+  .page-content {
+    .form-content {
+      width: 375px;
+
+      .form-left {
+        min-width: 100%;
+      }
+
+      .form-right {
+        min-width: 100%;
+        padding: 2rem;
+      }
+    }
+  }
+}
+
+// Small Screen
+@include mediaSs {
+  #start {
+    padding: 2rem 0rem;
+    width: 300px;
+    top: 105%;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    a {
+      font-size: 0.9rem;
+
+      &.btn {
+        padding: 0.1rem 0.3rem;
+      }
+    }
+  }
+
+  #services {
+    padding: 6rem 0rem;
+
+    .container {
+      width: 100%;
+    }
+  }
+
+  // Price Page
+  #price {
+    h1 {
+      font-size: 1.6rem;
+    }
+  }
+
+  // Sign Up Page
+  .page-content {
+    .form-content {
+      width: 320px;
+
+      .form-left {
+        min-width: 100%;
+      }
+
+      .form-right {
+        min-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 985px) {
+  #features {
+    .col-lg-7 {
+      order: 1;
+    }
+  }
+}

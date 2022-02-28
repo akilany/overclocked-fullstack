@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "frontend:install": "cd overclocked-frontend && npm install",
+    "backend:install": "cd overclocked-backend && npm install",
+    "frontend:start": "cd overclocked-frontend && npm run serve",
+    "backend:start": "cd overclocked-backend && npm run start",
+    "frontend:build": "cd overclocked-frontend && npm run build",
+    "backend:build": "cd overclocked-backend && npm run build"
+  }
+}
