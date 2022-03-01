@@ -79,12 +79,25 @@ const routes = [
     meta: {
       noAuth: true
     }
+  },
+  {
+    path: '/404',
+    name: '404',
+    component: () => import('@/views/Errors/NotFound')
+  },
+  {
+    path: '*',
+    redirect: {
+      name: '404'
+    }
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
+  linkActiveClass: 'active',
+  linkExactActiveClass: 'exact-active',
   scrollBehavior: (to, from, savedPosition) => {
     let scrollTo = 0
 
@@ -103,10 +116,10 @@ router.beforeEach((to, from, next) => {
   const loggedIn = localStorage.getItem('token')
   if (to.matched.some(record => record.meta.requiresAuth) && !loggedIn) {
     next({ name: 'Login' })
-    store.dispatch('notification/add', {
-      type: 'warning',
-      message: 'You need to be logged in to access this page'
-    })
+    // store.dispatch('notification/add', {
+    //   type: 'warning',
+    //   message: 'You need to be logged in to access this page'
+    // })
   }
   next()
 })

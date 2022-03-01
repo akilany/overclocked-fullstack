@@ -6,7 +6,8 @@ const catchAsync = require('../utils/catchAsync')
 const AppError = require('../utils/appError')
 const Email = require('../utils/email')
 
-const host = process.env.NODE_ENV === 'development' ? 'localhost:8080' : ''
+const host =
+  process.env.NODE_ENV === 'development' ? 'localhost:8080' : 'localhost:4111'
 
 const signToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {

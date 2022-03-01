@@ -29,7 +29,7 @@ npm run backend:install
 #### Start Local server
 
 ```bash
-npm run backend:start
+npm run start
 ```
 
 ### Client
