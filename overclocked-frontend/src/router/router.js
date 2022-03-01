@@ -26,12 +26,12 @@ const routes = [
   {
     path: '/blog',
     name: 'Blog',
-    component: () => import('@/views/Blog/Index')
-    // beforeEnter(routeTo, routeFrom, next) {
-    //   store.dispatch('post/fetchAll').then(() => {
-    //     next()
-    //   })
-    // }
+    component: () => import('@/views/Blog/Index'),
+    beforeEnter(routeTo, routeFrom, next) {
+      store.dispatch('post/fetchAll').then(() => {
+        next()
+      })
+    }
   },
   {
     path: '/blog/:id',

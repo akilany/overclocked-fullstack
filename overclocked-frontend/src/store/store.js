@@ -6,6 +6,7 @@ import * as me from './modules/me'
 import * as user from './modules/user'
 import * as product from './modules/product'
 import * as post from './modules/post'
+import * as comment from './modules/comment'
 import * as team from './modules/team'
 import * as sponsor from './modules/sponsor'
 import * as email from './modules/email'
@@ -34,6 +35,7 @@ export default new Vuex.Store({
     user,
     product,
     post,
+    comment,
     team,
     sponsor,
     email,

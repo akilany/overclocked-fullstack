@@ -1,22 +1,36 @@
 <template>
   <div class="blog-author">
     <div class="media align-items-center">
-      <img src="assets/img/blog/author.png" alt="" />
+      <img
+        :src="`${imageLink}/users/${publisher.photo}`"
+        :alt="`${publisher.name}`"
+      />
       <div class="media-body">
-        <a href="#">
-          <h4>Harvard milan</h4>
-        </a>
-        <p>
-          Second divided from form fish beast made. Every of seas all gathered
-          use saying you're, he our dominion twon Second divided from
-        </p>
+        <h4 class="mb-0">{{ publisher.name }}</h4>
+        <p>Author</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    author: {
+      type: Object,
+      required: true
+    },
+    imageLink: String
+  },
+  data() {
+    return {
+      publisher: ''
+    }
+  },
+  mounted() {
+    this.publisher = this.author
+  }
+}
 </script>
 
 <style></style>

@@ -1,7 +1,11 @@
 <template>
   <div class="comment-form">
-    <h4>Leave a Reply</h4>
-    <form class="form-contact comment_form" action="#" id="commentForm">
+    <h4>Leave a Comment</h4>
+    <form
+      class="form-contact comment_form"
+      @submit.prevent="addComment"
+      id="commentForm"
+    >
       <div class="row">
         <div class="col-12">
           <div class="form-group">
@@ -12,40 +16,8 @@
               cols="30"
               rows="9"
               placeholder="Write Comment"
+              v-model="comment.comment"
             ></textarea>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="form-group">
-            <input
-              class="form-control"
-              name="name"
-              id="name"
-              type="text"
-              placeholder="Name"
-            />
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="form-group">
-            <input
-              class="form-control"
-              name="email"
-              id="email"
-              type="email"
-              placeholder="Email"
-            />
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="form-group">
-            <input
-              class="form-control"
-              name="website"
-              id="website"
-              type="text"
-              placeholder="Website"
-            />
           </div>
         </div>
       </div>
@@ -59,7 +31,24 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      comment: {
+        comment: ''
+      }
+    }
+  },
+  methods: {
+    addComment() {
+      this.$store.dispatch('post/postComment', {
+        id: this.$route.params.id,
+        comment: this.comment
+      })
+      this.comment.comment = ''
+    }
+  }
+}
 </script>
 
 <style></style>

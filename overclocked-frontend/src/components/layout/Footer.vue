@@ -18,7 +18,7 @@
             <router-link :to="{ name: 'Home' }">OverClocked</router-link>
             was founded with two simple goals in mind. It is to provide our
             users with both personalized cutting edge technology and an
-            extensive range of technological support
+            extensive range of technological support.
           </p>
         </div>
         <div class="col-md-6">

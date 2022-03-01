@@ -119,11 +119,21 @@ export const actions = {
   postComment({ dispatch }, { id, comment }) {
     return services
       .postComment(id, comment)
-      .then(() => {})
+      .then(() => {
+        dispatch('fetch', id)
+        const notification = {
+          type: 'success',
+          message: 'Your comment was posted.'
+        }
+        dispatch('notification/add', notification, {
+          root: true
+        })
+      })
       .catch(err => {
+        console.log(err)
         const notification = {
           type: 'error',
-          message: `There was a problem posting your comment: ${err.response.data.message}`
+          message: `${err.response.data.message}`
         }
         dispatch('notification/add', notification, {
           root: true

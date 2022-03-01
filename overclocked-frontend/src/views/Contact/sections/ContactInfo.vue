@@ -4,8 +4,8 @@
       <div class="media-body">
         <i class="fas fa-home"></i>
         <div class="media-info">
-          <h4>Binghamton, New York</h4>
-          <p>4343 Hinkle Deegan Lake Road</p>
+          <h4>Giza, Egypt</h4>
+          <p>6th of October city</p>
         </div>
       </div>
     </div>
@@ -14,7 +14,7 @@
         <i class="fas fa-tablet-alt"></i>
         <div class="media-info">
           <h4>011 4796 5841</h4>
-          <p>Mon to Fri 9am to 6pm</p>
+          <p>Sun to Thu 9am to 6pm</p>
         </div>
       </div>
     </div>

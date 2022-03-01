@@ -5,7 +5,7 @@
         <div class="col-lg-8 mb-5 mb-lg-0">
           <div class="blog_left_sidebar">
             <ArticalCard
-              v-for="(artical, i) in 3"
+              v-for="(artical, i) in blog"
               :key="i"
               :artical="artical"
             />
@@ -56,6 +56,8 @@ import RecentArtical from '@/components/blog/RecentArtical'
 // import Tags from '@/components/blog/Tags'
 // import InstagramFeed from '@/components/blog/InstagramFeed'
 import Newsletter from '@/components/blog/Newsletter'
+
+import { mapState } from 'vuex'
 export default {
   components: {
     ArticalCard,
@@ -66,8 +68,10 @@ export default {
     // InstagramFeed,
     Newsletter
   },
-  mounted() {
-    this.$store.dispatch('post/fetchAll')
+  computed: {
+    ...mapState({
+      blog: state => state.post.blog
+    })
   }
 }
 </script>

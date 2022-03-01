@@ -11,9 +11,15 @@
 
 <script>
 import Artical from './Artical'
+import { mapState } from 'vuex'
 export default {
   components: {
     Artical
+  },
+  computed: {
+    ...mapState({
+      post: state => state.post.post
+    })
   }
 }
 </script>
