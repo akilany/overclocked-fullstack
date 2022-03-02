@@ -23,7 +23,7 @@ The application provides
 #### Install Dependencies
 
 ```bash
-npm run backend:install
+npm install
 ```
 
 #### Start Local server
@@ -37,13 +37,15 @@ npm run start
 #### Install Dependencies
 
 ```bash
-npm run frontend:install
+cd overclocked-frontend
+npm install
 ```
 
 ### Start Local server
 
 ```bash
-npm run frontend:start
+cd overclocked-frontend
+npm run serve
 ```
 
 ## Testing
