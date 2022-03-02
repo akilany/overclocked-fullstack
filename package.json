@@ -4,9 +4,7 @@
   "description": "Over Clocked Website",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    "build": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+    "start": "node server.js"
   },
   "author": "Ammar Yasser",
   "license": "ISC",
