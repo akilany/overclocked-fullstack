@@ -1,0 +1,30 @@
+@import 'config';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* --==Global Components==--
+====================== */
+@import 'navbar';
+@import 'banner';
+@import 'footer';
+
+/* --==Home==--
+====================== */
+@import 'home';
+
+/* --==Pages Style==--
+==========================*/
+@import 'pages';
+
+/* --==Media Queries==--
+==========================*/
+@import 'mobile';

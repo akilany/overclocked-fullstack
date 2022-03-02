@@ -1,0 +1,166 @@
+/* --==Sign Up Page==--
+==========================*/
+header {
+  .navbar-brand {
+    position: fixed;
+    font-size: 1.5rem;
+    top: 2%;
+    left: 2%;
+    font-family: 'Lobster', sans-serif;
+    z-index: 1000;
+    color: #fff !important;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.page-content {
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../images/news2.jpg') no-repeat 50% center/cover;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(70, 25, 4, 0.5);
+    z-index: -1;
+  }
+
+  .form-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-left {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 500px;
+      max-height: 500px;
+      min-width: 360px;
+      max-width: 360px;
+      background: url('../images/laptop2.jpg') no-repeat center center/cover;
+      color: #fff;
+      z-index: 1;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(70, 25, 4, 0.4);
+        z-index: -1;
+      }
+
+      h1 {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+      }
+
+      a {
+        font-size: 1.5rem;
+        padding-right: 0.6rem;
+        color: #fff;
+
+        &:last-child {
+          padding: 0;
+        }
+      }
+    }
+
+    .form-right {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      min-height: 550px;
+      max-height: 550px;
+      min-width: 500px;
+      max-width: 500px;
+      background: #fff;
+      padding: 3rem 5rem;
+
+      .input-group {
+        position: relative;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        .form-control {
+          height: 3rem;
+          width: 100%;
+          padding: 0 1rem;
+          font-size: 1rem;
+          border: none;
+          border-bottom: 1.5px solid rgba(26, 44, 64, 0.6);
+          border-radius: 0;
+          outline: none;
+
+          &:focus ~ span,
+          &:valid ~ span {
+            top: -23px;
+            font-size: 0.8rem;
+            padding: 2px 4px;
+          }
+
+          &:focus {
+            border-bottom-color: $main-clr;
+            color: $main-clr;
+          }
+        }
+
+        span {
+          position: absolute;
+          top: 14px;
+          left: 8px;
+          width: 100%;
+          pointer-events: none;
+          background: #fff;
+          text-transform: uppercase;
+          @include transEase;
+        }
+
+        // .btn {
+        //   background: $main-clr;
+        //   color: #fff;
+        //   text-transform: uppercase;
+        //   font-weight: 500;
+        //   border-radius: 0;
+        //   border: 1px solid $d-blue;
+        //   padding: 0.5rem 3rem;
+        //   @include transEase;
+
+        //   &:hover,
+        //   &:focus {
+        //     background: $d-blue;
+        //   }
+        // }
+
+        p {
+          padding-left: 1.2rem;
+
+          a {
+            color: $d-blue;
+            text-decoration: underline;
+            padding-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
