@@ -1,6 +1,6 @@
 # OverClocked
 
-[OverClocked](https://overclocked.netlify.app/) is a website for everything related to computer hardware and software, Is dedicated to helping tech users of all experience levels get more from the hardware and software that's central to a PC-centric universe.
+[OverClocked](https://overclocked.herokuapp.com/) is a website for everything related to computer hardware and software, Is dedicated to helping tech users of all experience levels get more from the hardware and software that's central to a PC-centric universe.
 
 The application provides
 

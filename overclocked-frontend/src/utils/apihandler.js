@@ -5,7 +5,7 @@ const auth = token ? `Bearer ${token}` : ''
 
 export const api = table => {
   return axios.create({
-    baseURL: `http://localhost:4111/api/v1/${table}`,
+    baseURL: `https://overclocked.herokuapp.com/api/v1/${table}`,
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
