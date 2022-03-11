@@ -4,7 +4,8 @@
   "description": "Over Clocked Website",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "frontend:build": "cd overclocked-frontend && npm run build && cd dist && echo '/*    /index.html  200' > _redirects"
   },
   "author": "Ammar Yasser",
   "license": "ISC",
