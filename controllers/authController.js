@@ -9,7 +9,7 @@ const Email = require('../utils/email')
 const host =
   process.env.NODE_ENV === 'development'
     ? 'localhost:8080'
-    : 'overclocked.herokuapp.com'
+    : 'overclocked.vercel.app'
 
 const signToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
