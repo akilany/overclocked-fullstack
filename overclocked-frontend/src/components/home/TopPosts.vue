@@ -12,10 +12,13 @@
           <span class="highlight">{{ post.topic }}</span> |
           {{ post.createdAt | date }}
         </p>
-        <router-link :to="{ name: '' }">
+        <router-link :to="{ name: 'Artical', params: { id: post.id } }">
           <h3>{{ post.title }}</h3>
         </router-link>
-        <router-link :to="{}" class="btn btn-outline-light">
+        <router-link
+          :to="{ name: 'Artical', params: { id: post.id } }"
+          class="btn btn-outline-light"
+        >
           Read More
         </router-link>
       </div>
@@ -30,10 +33,13 @@
             <span class="highlight">{{ post.topic }}</span> |
             {{ post.createdAt | date }}
           </p>
-          <router-link :to="{ name: '' }">
+          <router-link :to="{ name: 'Artical', params: { id: post.id } }">
             <h3>{{ post.title }}</h3>
           </router-link>
-          <router-link :to="{}" class="btn btn-outline-dark">
+          <router-link
+            :to="{ name: 'Artical', params: { id: post.id } }"
+            class="btn btn-outline-dark"
+          >
             Read More
           </router-link>
         </div>
