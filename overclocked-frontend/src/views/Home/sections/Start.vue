@@ -14,9 +14,12 @@
           or you’re curious about exactly what makes your computer run the way
           it does.
         </p>
-        <a href="#services" class="btn btn-light btn-lg"
-          >Check Out Our Services</a
+        <!-- <router-link
+          :to="{ name: 'Home', hash: '#services' }"
+          class="btn btn-light btn-lg"
         >
+          Check Out Our Services
+        </router-link> -->
       </div>
     </div>
   </section>

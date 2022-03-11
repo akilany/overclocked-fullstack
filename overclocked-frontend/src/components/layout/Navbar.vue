@@ -21,21 +21,19 @@
       >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link :to="{ name: 'Home' }" class="nav-link"
-              >Home</router-link
-            >
+            <a @click="goTo('home')" class="nav-link">
+              Home
+            </a>
           </li>
           <li class="nav-item">
-            <router-link
-              :to="{ name: 'Home', hash: '#features' }"
-              class="nav-link"
-              >Features</router-link
-            >
+            <a @click="goTo('features')" class="nav-link">
+              Features
+            </a>
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'Home', hash: '#team' }" class="nav-link"
-              >Team</router-link
-            >
+            <a @click="goTo('team')" class="nav-link">
+              Team
+            </a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -108,6 +106,16 @@ export default {
   methods: {
     logout() {
       this.$store.dispatch('auth/logout')
+    },
+    goTo(page) {
+      if (this.$route.name !== 'Home')
+        this.$router.push({ name: 'Home', hash: `#${page}` })
+      else
+        this.$vuetify.goTo(`#${page}`, {
+          duration: 800,
+          offset: 50,
+          easing: 'easeInOutCubic'
+        })
     }
   }
 }
