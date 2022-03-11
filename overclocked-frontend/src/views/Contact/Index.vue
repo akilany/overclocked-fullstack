@@ -12,6 +12,9 @@
 <script>
 import Contact from './Contact'
 export default {
+  metaInfo: {
+    title: 'Contact'
+  },
   components: {
     Contact
   }

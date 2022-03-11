@@ -14,6 +14,12 @@
 import { mapState } from 'vuex'
 import NotificationContainer from '@/components/NotificationContainer'
 export default {
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'OverClocked',
+    // all titles will be injected into this template
+    titleTemplate: '%s | OverClocked'
+  },
   components: {
     NotificationContainer
   },

@@ -12,6 +12,9 @@
 <script>
 import Blog from './components/Blog'
 export default {
+  metaInfo: {
+    title: 'Blog'
+  },
   components: {
     Blog
   }

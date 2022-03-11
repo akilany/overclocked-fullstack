@@ -13,6 +13,11 @@
 import Artical from './Artical'
 import { mapState } from 'vuex'
 export default {
+  metaInfo() {
+    return {
+      title: 'Artical'
+    }
+  },
   components: {
     Artical
   },

@@ -13,7 +13,10 @@
 
 <script>
 export default {
-  name: 'NotFound'
+  name: 'NotFound',
+  metaInfo: {
+    title: 'Not Found'
+  }
 }
 </script>
 

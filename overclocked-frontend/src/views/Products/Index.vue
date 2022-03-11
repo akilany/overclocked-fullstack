@@ -12,6 +12,9 @@
 <script>
 import Products from './components/Products'
 export default {
+  metaInfo: {
+    title: 'Products'
+  },
   components: {
     Products
   }

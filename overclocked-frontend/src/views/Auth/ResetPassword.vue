@@ -49,6 +49,9 @@
 
 <script>
 export default {
+  metaInfo: {
+    title: 'Reset Password'
+  },
   data() {
     return {
       user: {
