@@ -34,7 +34,7 @@ app.options('*', cors())
 app.use(express.static(path.join(__dirname, 'uploads')))
 
 // Serving static files
-app.use(express.static(path.join(__dirname, '../overclocked-frontend/dist')))
+// app.use(express.static(path.join(__dirname, '../overclocked-frontend/dist')))
 
 // Set security HTTP headers
 app.use(helmet())
