@@ -16,7 +16,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    imageLink: 'http://localhost:4111',
+    imageLink: 'https://overclocked.herokuapp.com',
     loader: false
   },
   mutations: {
